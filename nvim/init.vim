@@ -17,14 +17,12 @@ if has("termguicolors")
     " fix bug for vim
     set t_8f=^[[38;2;%lu;%lu;%lum
     set t_8b=^[[48;2;%lu;%lu;%lum
-
     " enable true color
     set termguicolors
 endif
 
 au BufRead,BufNewFile *.ss set softtabstop=2
 
-"Shortcut
 map <c-l> :w<CR>
 map <c-q> :q<CR>
 map <c-m> :ls<CR>
@@ -39,12 +37,16 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'morhetz/gruvbox'
 Plug 'qpkorr/vim-bufkill'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 so ~/.config/nvim/defx.vim
 so ~/.config/nvim/coc.vim
 
+map [f <Plug>(easymotion-prefix)
+
 set bg=light
 let g:gruvbox_contrast_light='hard'
 let g:gruvbox_contrast_dark='middle'
 colorscheme gruvbox
+
