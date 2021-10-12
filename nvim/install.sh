@@ -6,6 +6,6 @@ curl -sL install-node.now.sh/lts | sudo bash && \
 
 mkdir ../coc/extensions && cp ./package.json ../coc/extensions/package.json && cd ../coc/extensions && \
 # install coc extensions
-npm i
+npm i && \
 # init nvim
 nvim +'PlugInstall'

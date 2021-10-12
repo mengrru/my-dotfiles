@@ -26,7 +26,6 @@ au BufRead,BufNewFile *.ss set softtabstop=2
 map <c-l> :w<CR>
 map <c-q> :q<CR>
 map <c-m> :ls<CR>
-map <c-k> :BD<CR>
 map <c-n> :bn<CR>
 map <c-p> :bp<CR>
 nnoremap <Leader>v :so %<CR>
@@ -38,11 +37,15 @@ Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'morhetz/gruvbox'
 Plug 'qpkorr/vim-bufkill'
 Plug 'easymotion/vim-easymotion'
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 so ~/.config/nvim/defx.vim
 so ~/.config/nvim/coc.vim
+so ~/.config/nvim/lightline.vim
 
+map <c-k> :BD<CR>
 map [f <Plug>(easymotion-prefix)
 
 set bg=light
